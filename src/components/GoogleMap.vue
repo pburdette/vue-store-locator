@@ -114,16 +114,26 @@ export default {
       this.computeDistance()
     },
 
-    filterAndSort () {
+    convertRadius () {
+      this.radius = Number(this.radius) * 1609.344
+    },
+
+    filterMarkers () {
       this.markers = this.markers.filter(marker => marker.distance < this.radius)
+    },
+
+    sortMarkers () {
       this.markers.sort((a, b) => a.distance - b.distance)
     },
 
     showLocations () {
-      // convert miles to meters
-      this.radius = Number(this.radius) * 1609.344
-      // if marker is within reach display
-      this.filterAndSort()
+      this.convertRadius()
+      
+      // filter and sort markers
+      this.filterMarkers()
+      this.sortMarkers()
+
+      // set map zoom higher for zoom in effect
       this.zoom = 7
     }
   },
