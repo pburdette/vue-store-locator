@@ -4,7 +4,7 @@
 
 ## Description
 
-This repo is an example of how to build a store locator in Vue. It utilizes [vue-google-maps](https://github.com/xkjyeah/vue-google-maps) and the [Google Maps API](https://developers.google.com/maps/documentation/javascript/reference/3/). Before building this I searched for a good example and was unsuccessful in finding one. So I decided to build one and share the code for others in the same situation as I was.
+This repo is an example of how to build a store locator in Vue. It utilizes [vue-google-maps](https://github.com/xkjyeah/vue-google-maps) and the [Google Maps API](https://developers.google.com/maps/documentation/javascript/reference/3/). Before building this I searched for a good example and was unsuccessful in finding one. So I decided to build one and share the code for others in the same situation as I was. All code is written on the client-side, so no need for a backend to process radius etc. I've brought in static data for the sake of this repo, but in production you most likely will be making an API call to a endpoint.
 
 ## Features
 
