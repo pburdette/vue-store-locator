@@ -20,7 +20,7 @@
               <option value="200">200</option>
               <option value="500">500</option>
             </select>
-            <button type="button" class="btn btn-primary" @click="showLocations">Search</button>
+            <button type="button" class="btn btn-primary" @click="updateLocations">Search</button>
           </div>
           <store-list :markers="markers"/>
         </div>
@@ -126,9 +126,9 @@ export default {
       this.markers.sort((a, b) => a.distance - b.distance)
     },
 
-    showLocations () {
+    updateLocations () {
       this.convertRadius()
-      
+
       // filter and sort markers
       this.filterMarkers()
       this.sortMarkers()
